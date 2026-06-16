@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply font-sans text-slate-700 dark:text-slate-300 transition-colors duration-500;
+  }
+
+  ::selection {
+    @apply bg-accent-500/30 text-slate-900 dark:text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent-500/30 rounded-full hover:bg-accent-500/60 transition-colors;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---- Glass surfaces ---- */
+  .glass {
+    @apply bg-white/60 dark:bg-white/[0.04] backdrop-blur-xl border border-slate-200/70 dark:border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-white/[0.04] backdrop-blur-xl border border-slate-200/70 dark:border-white/10
+           shadow-xl shadow-slate-200/40 dark:shadow-black/40
+           transition-all duration-500;
+  }
+
+  .glass-card:hover {
+    @apply border-accent-400/50 dark:border-accent-400/40 shadow-2xl shadow-accent-500/10 -translate-y-1;
+  }
+
+  /* ---- Typography helpers ---- */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-400 via-accent-500 to-accent-700 bg-clip-text text-transparent;
+  }
+
+  .heading {
+    @apply font-display font-bold tracking-tight text-slate-900 dark:text-white;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent-600 dark:text-accent-300;
+  }
+
+  .text-muted {
+    @apply text-slate-500 dark:text-slate-400;
+  }
+
+  /* ---- Buttons ---- */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5
+           font-semibold text-white
+           bg-gradient-to-r from-accent-600 to-accent-700
+           shadow-md shadow-accent-600/20
+           transition-all duration-300
+           hover:shadow-lg hover:shadow-accent-600/25 hover:-translate-y-0.5
+           active:scale-95
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5
+           font-semibold text-slate-700 dark:text-slate-200
+           glass
+           transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/60
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400;
+  }
+
+  /* ---- Scroll reveal ---- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

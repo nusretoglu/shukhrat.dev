@@ -1,0 +1,32 @@
+# Nuxt dev/build outputs
+.nuxt
+.output
+.data
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+*.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Local Claude config (preview + per-user permissions)
+.claude/launch.json
+.claude/settings.local.json
+
+# Design reference (not part of the app)
+example.png
