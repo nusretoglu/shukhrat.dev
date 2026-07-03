@@ -32,6 +32,42 @@
           </div>
         </div>
       </div>
+
+      <!-- Languages & interests -->
+      <div class="mt-16 grid gap-6 md:grid-cols-2">
+        <div v-reveal class="glass-card rounded-[1.75rem] p-8">
+          <h3 class="mb-6 flex items-center gap-3 font-display text-lg font-bold text-slate-900 dark:text-white">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-accent-500 to-accent-700 text-white">
+              <Icon name="lucide:languages" class="h-5 w-5" />
+            </span>
+            Languages
+          </h3>
+          <ul class="space-y-3">
+            <li v-for="lang in languages" :key="lang.name" class="flex items-center justify-between">
+              <span class="text-sm font-semibold text-slate-900 dark:text-white">{{ lang.name }}</span>
+              <span class="rounded-full bg-accent-500/10 px-3 py-1 text-xs font-medium text-accent-600 dark:text-accent-300">{{ lang.level }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div v-reveal="80" class="glass-card rounded-[1.75rem] p-8">
+          <h3 class="mb-6 flex items-center gap-3 font-display text-lg font-bold text-slate-900 dark:text-white">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-accent-500 to-accent-700 text-white">
+              <Icon name="lucide:heart" class="h-5 w-5" />
+            </span>
+            Interests
+          </h3>
+          <div class="flex flex-wrap gap-2.5">
+            <span
+              v-for="hobby in interests"
+              :key="hobby"
+              class="glass rounded-full px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200"
+            >
+              {{ hobby }}
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -42,18 +78,25 @@ const columns = [
     title: 'Experience',
     icon: 'lucide:briefcase',
     items: [
-      { period: '2022 — Present', title: 'Senior Frontend Engineer', org: 'Global Tech Solutions', description: 'Architecting high-performance enterprise dashboards with Nuxt 3 and TypeScript.' },
-      { period: '2019 — 2022', title: 'Vue.js Developer', org: 'Creative Digital Agency', description: 'Built 20+ responsive web applications with a focus on UX and performance.' },
-      { period: '2017 — 2019', title: 'Web Developer', org: 'Local Tech Startup', description: 'Built and maintained client websites using Vue.js and modern CSS frameworks.' },
+      { period: 'Mar 2022 — Present', title: 'Full Stack Developer', org: 'RealSoft Bukhara', description: 'Building high-performance, responsive web interfaces with Vue.js, Nuxt.js and TypeScript, backed by PostgreSQL and Node.js on the backend.' },
     ],
   },
   {
     title: 'Education',
     icon: 'lucide:graduation-cap',
     items: [
-      { period: '2013 — 2017', title: 'BS in Computer Science', org: 'State Technical University', description: 'Focused on algorithms, data structures and software engineering principles.' },
-      { period: '2011 — 2013', title: 'IT Certification', org: 'Advanced IT Academy', description: 'Specialized training in modern web development and database management.' },
+      { period: 'Sep 2018 — Jul 2022', title: 'Bachelor, Telecommunication Technologies', org: 'Tashkent University of Information Technologies', description: 'Studied telecommunication and information technologies, building a foundation in software engineering and systems.' },
     ],
   },
 ]
+
+// Spoken languages (CV). Refine the proficiency labels if needed.
+const languages = [
+  { name: 'Uzbek', level: 'Native' },
+  { name: 'Tajik', level: 'Native' },
+  { name: 'English', level: 'Professional' },
+]
+
+// Interests / hobbies (CV).
+const interests = ['Football', 'Bowling', 'Video Games', 'Tennis', 'Reading']
 </script>

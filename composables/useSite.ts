@@ -12,10 +12,10 @@ export const useSite = () => {
 
   // `icon` matches a key in components/SocialIcon.vue
   const socials = [
-    { name: 'GitHub', icon: 'github', url: 'https://github.com/' },
-    { name: 'LinkedIn', icon: 'linkedin', url: 'https://linkedin.com/' },
-    { name: 'X', icon: 'x', url: 'https://x.com/' },
-    { name: 'Email', icon: 'mail', url: 'mailto:shukhrat@example.com' },
+    { name: 'GitHub', icon: 'github', url: 'https://github.com/nusretoglu' },
+    { name: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/in/nusretoglu/' },
+    { name: 'X', icon: 'x', url: 'https://x.com/nusretoglu_' },
+    { name: 'Email', icon: 'mail', url: 'mailto:shuhratteshayev2000@gmail.com' },
   ]
 
   return { nav, socials }

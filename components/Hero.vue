@@ -13,23 +13,25 @@
           </div>
 
           <h1 v-reveal="80" class="heading mb-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
-            Frontend architect<br />
-            building the <span class="gradient-text">modern web</span>.
+            Full-stack developer<br />
+            crafting the <span class="gradient-text">modern web</span>.
           </h1>
 
           <p v-reveal="160" class="mb-10 max-w-xl text-lg leading-relaxed text-muted">
-            I'm <span class="font-semibold text-slate-900 dark:text-white">Shukhrat</span> — a senior
-            developer specializing in <span class="font-medium text-accent-600 dark:text-accent-300">Nuxt 3</span>,
-            <span class="font-medium text-accent-600 dark:text-accent-300">Vue.js</span> and scalable
-            web architecture. I turn complex problems into fast, beautiful interfaces.
+            I'm <span class="font-semibold text-slate-900 dark:text-white">Shukhrat Teshaev</span> — a
+            Full Stack Developer with 3+ years of commercial experience, specializing in
+            <span class="font-medium text-accent-600 dark:text-accent-300">Nuxt 3</span>,
+            <span class="font-medium text-accent-600 dark:text-accent-300">Vue.js</span> and
+            <span class="font-medium text-accent-600 dark:text-accent-300">TypeScript</span>. Backed by a
+            solid backend &amp; PostgreSQL foundation, I turn complex problems into fast, user-centric interfaces.
           </p>
 
           <div v-reveal="240" class="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-            <a href="#portfolio" class="btn-primary w-full sm:w-auto" @click="scrollTo($event, '#portfolio')">
+            <a v-magnetic="20" href="#portfolio" class="btn-primary w-full sm:w-auto" @click="scrollTo($event, '#portfolio')">
               View Projects
-              <Icon name="lucide:arrow-right" class="h-4 w-4" />
+              <Icon name="lucide:arrow-right" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
-            <a href="#contact" class="btn-ghost w-full sm:w-auto" @click="scrollTo($event, '#contact')">
+            <a v-magnetic="14" href="#contact" class="btn-ghost w-full sm:w-auto" @click="scrollTo($event, '#contact')">
               Get in touch
             </a>
           </div>
@@ -70,7 +72,7 @@
 
             <!-- Floating experience card -->
             <div class="glass-card absolute -bottom-6 -left-6 rounded-2xl px-5 py-4">
-              <div class="font-display text-3xl font-bold gradient-text">5+</div>
+              <div class="font-display text-3xl font-bold gradient-text">3+</div>
               <div class="mt-1 text-xs font-medium uppercase tracking-wider text-muted">Years experience</div>
             </div>
 

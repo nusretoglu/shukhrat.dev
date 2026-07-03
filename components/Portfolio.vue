@@ -33,7 +33,7 @@
         <article
           v-for="project in filteredProjects"
           :key="project.title"
-          class="group relative aspect-[16/10] overflow-hidden rounded-[2rem] glass-card p-0"
+          class="group relative aspect-[16/10] overflow-hidden rounded-[2rem] glass-card gradient-border p-0"
         >
           <!-- Cover -->
           <div class="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900">
@@ -47,8 +47,8 @@
             <span class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent-300">{{ project.category }}</span>
             <h3 class="mb-5 font-display text-2xl font-bold text-white">{{ project.title }}</h3>
             <div class="flex gap-3">
-              <a href="#" class="rounded-xl bg-white/10 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md transition-colors hover:bg-accent-600">Case study</a>
-              <a href="#" class="rounded-xl border border-white/20 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-slate-900">Live demo</a>
+              <a v-magnetic="10" href="#" class="rounded-xl bg-white/10 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md transition-colors hover:bg-accent-600">Case study</a>
+              <a v-magnetic="10" href="#" class="rounded-xl border border-white/20 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-slate-900">Live demo</a>
             </div>
           </div>
         </article>

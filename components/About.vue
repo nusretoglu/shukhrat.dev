@@ -48,11 +48,12 @@
           </div>
 
           <div v-reveal class="flex flex-wrap gap-4">
-            <a href="#" class="btn-primary">
+            <!-- Place your PDF at public/Shukhrat-Teshaev-CV.pdf for this to resolve. -->
+            <a v-magnetic="18" href="/Shukhrat-Teshaev-CV.pdf" download target="_blank" rel="noopener" class="btn-primary">
               Download CV
               <Icon name="lucide:download" class="h-4 w-4" />
             </a>
-            <a href="#services" class="btn-ghost" @click.prevent="scrollTo('#services')">My stack</a>
+            <a v-magnetic="14" href="#services" class="btn-ghost" @click.prevent="scrollTo('#services')">My stack</a>
           </div>
         </div>
       </div>
@@ -61,11 +62,12 @@
 </template>
 
 <script setup>
+// Levels are indicative — adjust the percentages to your own assessment.
 const skills = [
-  { name: 'Vue / Nuxt 3', level: 98 },
-  { name: 'TypeScript', level: 92 },
-  { name: 'Tailwind CSS', level: 95 },
-  { name: 'Web Architecture', level: 88 },
+  { name: 'Vue.js / Nuxt', level: 88 },
+  { name: 'TypeScript / JavaScript', level: 84 },
+  { name: 'PostgreSQL / Node.js', level: 78 },
+  { name: 'Pinia / State management', level: 82 },
 ]
 
 // Animate the bars when the section enters the viewport.

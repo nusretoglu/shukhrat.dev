@@ -13,6 +13,9 @@ const map = {
   linkedin: 'simple-icons:linkedin',
   x: 'simple-icons:x',
   mail: 'lucide:mail',
+  location: 'lucide:map-pin',
+  phone: 'lucide:phone',
+  calendar: 'lucide:calendar',
 }
 
 const iconName = computed(() => map[props.name] ?? 'lucide:link')

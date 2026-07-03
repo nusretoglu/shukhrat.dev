@@ -51,8 +51,13 @@
             </p>
 
             <ul class="space-y-4">
-              <li v-for="(c, i) in channels" :key="c.label" v-reveal="i * 80">
-                <a :href="c.href" class="glass-card flex items-center gap-4 rounded-2xl p-4">
+              <li v-for="(c, i) in channels" :key="c.label + c.value" v-reveal="i * 80">
+                <a
+                  :href="c.href"
+                  :target="c.href.startsWith('http') ? '_blank' : undefined"
+                  :rel="c.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+                  class="glass-card flex items-center gap-4 rounded-2xl p-4"
+                >
                   <span class="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-accent-500/20 to-accent-700/20 text-accent-600 dark:text-accent-300">
                     <SocialIcon :name="c.icon" />
                   </span>
@@ -109,7 +114,7 @@
                 <span v-if="errors.message" id="err-message" class="mt-2 block text-xs font-medium text-rose-500">{{ errors.message }}</span>
               </div>
 
-              <button :disabled="isSubmitting" class="btn-primary w-full">
+              <button v-magnetic="14" :disabled="isSubmitting" class="btn-primary w-full">
                 <span v-if="isSubmitting">Sending…</span>
                 <span v-else>Send message</span>
               </button>
@@ -139,9 +144,13 @@ const posts = [
 ]
 
 const channels = [
-  { label: 'Email', value: 'shukhrat@example.com', icon: 'mail', href: 'mailto:shukhrat@example.com' },
-  { label: 'LinkedIn', value: 'in/shukhrat-dev', icon: 'linkedin', href: 'https://linkedin.com/' },
-  { label: 'GitHub', value: 'github.com/shukhrat', icon: 'github', href: 'https://github.com/' },
+  { label: 'Email', value: 'shuhratteshayev2000@gmail.com', icon: 'mail', href: 'mailto:shuhratteshayev2000@gmail.com' },
+  { label: 'Phone', value: '+998 90 018 47 50', icon: 'phone', href: 'tel:+998900184750' },
+  { label: 'Phone', value: '+998 97 989 75 76', icon: 'phone', href: 'tel:+998979897576' },
+  { label: 'Location', value: 'Bukhara, Uzbekistan', icon: 'location', href: '#' },
+  { label: 'Born', value: 'June 8, 2000', icon: 'calendar', href: '#' },
+  { label: 'LinkedIn', value: 'in/nusretoglu', icon: 'linkedin', href: 'https://www.linkedin.com/in/nusretoglu/' },
+  { label: 'GitHub', value: 'github.com/nusretoglu', icon: 'github', href: 'https://github.com/nusretoglu' },
 ]
 
 const form = reactive({ name: '', email: '', subject: '', message: '' })

@@ -41,7 +41,7 @@
         <!-- Actions -->
         <div class="flex items-center gap-2">
           <ThemeToggle />
-          <a href="#contact" class="btn-primary hidden text-sm sm:inline-flex" @click="onNavClick($event, '#contact')">
+          <a v-magnetic="16" href="#contact" class="btn-primary hidden text-sm sm:inline-flex" @click="onNavClick($event, '#contact')">
             Hire Me
           </a>
 
@@ -87,7 +87,7 @@
           >
             {{ item.label }}
           </a>
-          <a href="#contact" class="btn-primary mt-2 text-sm" @click="onNavClick($event, '#contact')">
+          <a v-magnetic="14" href="#contact" class="btn-primary mt-2 text-sm" @click="onNavClick($event, '#contact')">
             Hire Me
           </a>
         </nav>

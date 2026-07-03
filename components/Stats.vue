@@ -20,10 +20,10 @@
 
 <script setup>
 const stats = [
-  { label: 'Deployed apps', value: 40, suffix: '+' },
-  { label: 'Lines of code', value: 1, suffix: 'M+' },
-  { label: 'Coffee cups', value: 3, suffix: 'k+' },
-  { label: 'Happy clients', value: 100, suffix: '%' },
+  { label: 'Years of experience', value: 3, suffix: '+' },
+  { label: 'Core technologies', value: 10, suffix: '+' },
+  { label: 'Languages spoken', value: 3, suffix: '' },
+  { label: 'Projects shipped', value: 10, suffix: '+' },
 ]
 
 const display = ref(stats.map(() => 0))

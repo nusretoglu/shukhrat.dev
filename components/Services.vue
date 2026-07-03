@@ -15,7 +15,7 @@
           v-for="(service, i) in services"
           :key="service.title"
           v-reveal="i * 90"
-          class="glass-card group flex flex-col rounded-3xl p-8"
+          class="glass-card gradient-border group flex flex-col rounded-3xl p-8"
         >
           <div class="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-accent-500/20 to-accent-700/20 text-accent-600 transition-transform duration-300 group-hover:scale-110 dark:text-accent-300">
             <Icon :name="service.icon" class="h-7 w-7" />

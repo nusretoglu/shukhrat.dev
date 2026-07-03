@@ -25,6 +25,6 @@
 <script setup>
 // Page-specific head; site-wide defaults live in app.vue.
 useHead({
-  title: 'Shukhrat — Frontend Architect & Nuxt Expert',
+  title: 'Shukhrat Teshaev — Full Stack Developer (Nuxt & Vue)',
 })
 </script>
