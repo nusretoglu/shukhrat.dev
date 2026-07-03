@@ -48,8 +48,7 @@
           </div>
 
           <div v-reveal class="flex flex-wrap gap-4">
-            <!-- Place your PDF at public/Shukhrat-Teshaev-CV.pdf for this to resolve. -->
-            <a v-magnetic="18" href="/Shukhrat-Teshaev-CV.pdf" download target="_blank" rel="noopener" class="btn-primary">
+            <a v-magnetic="18" href="/Shukhrat-Teshaev-CV.jpg" download="Shukhrat-Teshaev-CV.jpg" target="_blank" rel="noopener" class="btn-primary">
               Download CV
               <Icon name="lucide:download" class="h-4 w-4" />
             </a>
